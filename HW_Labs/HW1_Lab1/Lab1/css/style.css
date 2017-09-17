@@ -1,0 +1,50 @@
+body {
+	background: #FFFEED;
+}
+
+.navbar-nav a:hover{
+	color: red !important;
+}
+
+.headt {
+	color: #2c3e50;
+	margin-bottom: 20px;
+	font-family: "Avant Garde", cursive, sans-serif;
+	text-align: center;
+}
+
+.border-img {
+	border: 5px solid black;
+	border-radius: 5px;
+	margin-bottom: 10px;
+}
+
+#content {
+	margin-top: 10px;
+	border: 3px solid #bdc3c7;
+	border-radius: 3px;
+	padding: 15px;
+	background: #ecf0f1;
+}
+
+#content p {
+	border-radius: 3px;
+	padding: 10px;
+	background: #F1CBC3;
+}
+
+button.custom {
+	font-size: 18px;
+	font-weight: 500;
+	white-space: normal;
+	background-color: #e67e22;
+	color: white;
+}
+
+button.custom:hover{
+	background-color: #d35400;
+}
+
+@media (min-width: 220px) and (max-width: 551px) {
+
+}

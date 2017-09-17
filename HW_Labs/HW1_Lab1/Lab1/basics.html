@@ -1,0 +1,64 @@
+<!DOCTYPE HTML>
+<html lang="en">
+
+<head>
+ 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+ 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>CS 171 Lab 1</title>
+
+ 	<!--Boostrap CSS and other CSS-->
+ 	<link rel="stylesheet" href="bootstrap-3.3.7-dist/css/bootstrap.min.css"> 
+ 	<link rel="stylesheet" href="css/style.css"> 
+</head>
+
+<body>
+	<nav class="navbar navbar-default">
+	  	<div class="container-fluid">
+	    	<!-- Brand and toggle get grouped for better mobile display -->
+	    	<div class="navbar-header">
+	      		<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+		        	<span class="sr-only">Toggle navigation</span>
+		        	<span class="icon-bar"></span>
+		        	<span class="icon-bar"></span>
+		        	<span class="icon-bar"></span>
+	      		</button>
+	      		<a class="navbar-brand" href="#">CS 171 - Basics</a>
+	    	</div>
+
+	    	<!-- Collect the nav links, forms, and other content for toggling -->
+	    	<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+	      		<ul class="nav navbar-nav">
+	        		<li><a href="http://www.cs171.org/2017/index.html" target="_blank">cs171.org</a></li>
+	        		<li class="dropdown">
+	          			<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Resources <span class="caret"></span></a>
+	          			<ul class="dropdown-menu">
+	            			<li><a href="http://chimera.labs.oreilly.com/books/1230000000345/ch03.html" target="_blank">Chapter 3 in D3</a></li>
+	            			<li><a href="http://dataviscourse.net/2015/lectures/lecture-html/" target="_blank">University of Utah Visualization Course</a></li>
+	          			</ul>
+	        		</li>
+	      		</ul>
+	    	</div><!-- /.navbar-collapse -->
+	  	</div><!-- /.container-fluid -->
+	</nav>
+
+	<div class="container">
+		<div class="row">
+			<div class="col-md-6 col-sm-6">
+				<h1 class="headt">The Harvard Factbook</h1>
+				<button id="cs171-basics" class="btn custom" type="button">Get a random fact about Harvard University</button>
+				<div id="content"></div>
+			</div>
+			<div class="col-md-6 col-sm-6">
+				<img class = "img-responsive border-img" src="img/widener.jpg">
+				<img class = "img-responsive border-img" src="img/widener2.jpg">
+			</div>
+		</div>
+	</div>
+
+	<!--Boostrap JS and other JS-->
+	<script src="https://code.jquery.com/jquery-latest.min.js"></script>
+	<script src="bootstrap-3.3.7-dist/js/bootstrap.min.js"></script>
+	<script src="js/dom-example.js"></script>
+
+</body>
+</html>
