@@ -46,6 +46,11 @@ var xAxisGroup = svg.append("g")
 var yAxisGroup = svg.append("g")
     .attr("class", "y-axis axis");
 
+var tip = d3.tip().attr('class', 'd3-tip').html(function(d) { 
+    return "<b>" + d.value + " deliveries</b>";
+});
+
+svg.call(tip);
 
 function renderBarChart(data) {
 
@@ -80,27 +85,8 @@ function renderBarChart(data) {
         .attr("y", function(d){ return y(d.value); })
         .attr("height", function(d){ return height - y(d.value); })
         .attr("width", x.bandwidth())
-        .on("mouseover", function(d) {
-
-            //Get this bar's x/y values, then augment for the tooltip
-            var xPosition = margin.left + parseFloat(d3.select(this).attr("x")) + x.bandwidth() / 2;
-            var yPosition = margin.top + parseFloat(d3.select(this).attr("y")) / 2 + height/3;
-
-            //Update the tooltip position and value
-            d3.select("#tooltip")
-                .style("left", xPosition + "px")
-                .style("top", yPosition + "px")
-                .select("#value")
-                .text(d.value);
-
-            //Show the tooltip
-            d3.select("#tooltip").classed("hidden", false);
-        })
-        .on("mouseout", function(d) {
-
-            //Hide the tooltip
-            d3.select("#tooltip").classed("hidden", true);
-        });;
+        .on("mouseover", tip.show)
+        .on("mouseout", tip.hide);
 
 
     // ---- DRAW AXIS ----
@@ -120,5 +106,6 @@ function renderBarChart(data) {
         .attr("y", -15)
         .attr("dy", ".1em")
         .style("text-anchor", "end")
+        .style('fill', 'white')
         .text("Deliveries");
 }

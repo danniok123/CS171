@@ -4,7 +4,7 @@
 
 dataFiltering();
 
-function dataFiltering(type) {
+function dataFiltering() {
 	var attractions = attractionData;
 
 	var selectBox = document.getElementById("SELECT-ID");

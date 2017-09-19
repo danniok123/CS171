@@ -1,19 +1,53 @@
 
 
 /* ************ ADD YOUR CUSTOM STYLES ************ */
+body {
+  background: linear-gradient(
+                     rgba(20,20,20, .6), 
+                     rgba(20,20,20, .6)),
+                     url("../img/pizzabg.jpg");
 
+  color: white;
 
+}
+
+.container {
+    text-align: center;
+}
+
+h1 {
+  font-family: 'Anton', sans-serif;
+  letter-spacing: 2px;
+  margin-bottom: 20px;
+  color: #f1c40f;
+}
+
+h2 {
+  color: yellow;
+}
+
+ul {
+  list-style-type: none;
+}
+
+.table {
+    border: 4px solid black !important;
+}
+tr:hover {
+  background-color: yellow;
+  color: black;
+}
 
 /****************/
 /*   BAR-CHART  */
 /****************/
 
 .bar {
-  fill: #3C948B;
+  fill: #2980b9;
 }
 
 .bar:hover {
-  fill: #8E7060;
+  fill: #f1c40f;
 }
 
 .axis {
@@ -23,7 +57,7 @@
 .axis path,
 .axis line {
   fill: none;
-  stroke: #000;
+  stroke: #fff;
   shape-rendering: crispEdges;
 }
 
@@ -33,7 +67,13 @@
 
 .axis-title {
 	fill: #888;
-	font-size: 11px;
+	font-size: 15px;
+  font-weight: 600;
+}
+
+.axis text{
+  fill: white;
+  font-size: 13px;
 }
 
 

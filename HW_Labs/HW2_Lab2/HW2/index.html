@@ -9,18 +9,85 @@
 		<!-- Load CSS libraries -->
 		<link rel="stylesheet" href="css/bootstrap.min.css">
 		<link rel="stylesheet" href="css/style.css">
+
+		<!-- Fonts -->
+		<link href="https://fonts.googleapis.com/css?family=Anton" rel="stylesheet">
 	</head>
 	<body>
 
 	<!-- ********************** ADD YOUR HTML-ELEMENTS HERE *********************** -->	
 	<!-- Make sure to include a div-container with the id: 'chart-area' -->
-	<div id="chart-area"></div>
+	<h1 class="text-center">Italian Pizza World Delivery</h1>
+
+	<div class = "container">
+		<form class="form-inline">
+  			<div class="form-group">
+    			<label for="email">Area: </label>
+    			<select class="form-control" id="area" onchange="createVisualization()">
+            		<option value="all">All</option>
+            		<option value="Boston">Boston</option>
+            		<option value="Cambridge">Cambridge</option>
+            		<option value="Somerville">Somerville</option>
+          		</select>
+  			</div>
+ 			<div class="form-group">
+    			<label for="pwd">Order Type: </label>
+    			<select class="form-control" id="order-type" onchange="createVisualization()">
+            		<option value="all">All</option>
+            		<option value="web">Web</option>
+            		<option value="phone">Phone</option>
+          		</select>
+  			</div>
+		</form>
+	</div>
+
+	<div class="container">
+		<div class="row">
+			<div class="col-md-4">
+				<h2>Dataset Summary</h2>
+				<table class="table table-bordered">
+					<tbody>
+						<tr>
+							<td>Number of pizza deliveries</td>
+							<td id="pizza_d"></td>
+						</tr>
+						<tr>
+							<td>Number of all delivered pizzas</td>
+							<td id="num_all"></td>
+						</tr>
+						<tr>
+							<td>Average Delivery Time</td>
+							<td id="avg_time"></td>
+						</tr>
+						<tr>
+							<td>Total sales in USD</td>
+							<td id="total_s"></td>
+						</tr>
+						<tr>
+							<td>Number of all feedback entries</td>
+							<td id="num_feed"></td>
+						</tr>
+					</tbody>
+				</table>
+				<p>Number of feedback entries per quality category:</p>
+				<ul class="pull-left">
+					<li>Low: <span id="feed_low"> </span></li>
+					<li>Medium: <span id="feed_med"> </span></li>
+					<li>High: <span id="feed_high"> </span></li>
+				</ul>
+			</div>
+			<div class="col-md-8">
+				<div id="chart-area" class="center-div"></div>
+			</div>
+		</div>
+	</div>
 	
 
 	<!-- Load JS libraries: jQuery, bootstrap, D3, D3 Tooltips -->
 	<script src="js/jquery.min.js"></script>
 	<script src="js/bootstrap.min.js"></script>
 	<script src="js/d3.js"></script>
+	<script src="js/d3-tip.js"></script>
 
 	<!-- Completed: Data loading, bar chart rendering -->
 	<script src="js/delivery-data.js"></script>
