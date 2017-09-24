@@ -1,0 +1,14 @@
+body {
+	padding: 50px;
+	font-family: "Verdana";
+}
+
+h2.head {
+	color: #2980b9;
+}
+
+.city-label {
+	font-size: 11px;
+  	text-anchor: middle;
+}
+
