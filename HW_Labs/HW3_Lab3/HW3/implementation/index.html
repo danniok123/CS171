@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>HW3</title>
+
+	<!-- Bootstrap and Custom CSS-->
+	<link rel="stylesheet" href="css/bootstrap.min.css">
+	<link rel="stylesheet" href="css/style.css">
+
+	<!-- Custom Fonts -->
+	<link href="https://fonts.googleapis.com/css?family=Encode+Sans+Expanded" rel="stylesheet">
+</head>
+
+<body>
+	<div class="container">
+		<h2 class="head text-center">The World's Tallest Buildings</h2>
+		<div class="row">
+			<div class="col-md-6 dotted" id="bar-chart"></div>
+			<div class="col-md-3" id="chart-img"></div>
+			<div class="col-md-3">
+				<div id="chart-stats"></div>
+				<table>
+					<tbody>
+						<tr>
+							<td> Height</td>
+							<td id="height_b"></td>
+						</tr>
+						<tr>
+							<td> City </td>
+							<td id="city_b"></td>
+						</tr>
+						<tr>
+							<td> Country </td>
+							<td id="country_b"></td>
+						</tr>
+						<tr>
+							<td> Floors </td>
+							<td id="floors_b"></td>
+						</tr>
+						<tr>
+							<td> Completed </td>
+							<td id="complete_b"></td>
+						</tr>
+					</tbody>
+				</table>
+
+				<a class="btn btn-success" id="wiki" target="_blank">Wiki Page</a>
+			</div>
+		</div>
+	</div>
+
+	<!-- Load JS libraries: jQuery, bootstrap, D3, D3 Tooltips -->
+	<script src="js/jquery.min.js"></script>
+	<script src="js/bootstrap.min.js"></script>
+	<script src="js/d3.min.js"></script>
+
+	<!-- Custom JS -->
+	<script src="js/main.js"></script>
+</body>
+</html>

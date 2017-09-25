@@ -1,0 +1,41 @@
+body {
+	background: #F7E68E;
+}
+
+.dotted {
+	border-color: black;
+	border-right-style: dashed;
+	height: 400px;
+}
+
+h2.head {
+	color: blue;
+	margin-bottom: 50px;
+	font-family: 'Encode Sans Expanded', sans-serif;
+	font-weight: 900;
+}
+
+.data-rect {
+	fill: #1abc9c;
+	cursor: pointer;
+}
+
+.data-rect:hover {
+	fill: #16a085;
+}
+
+.text-name {
+	text-anchor: end;
+	cursor: pointer;
+	font-weight: 900;
+}
+
+.text-height {
+	text-anchor: end;
+	fill: white !important;
+}
+
+table > tbody > tr > td{
+    border-top: 1px solid #7D7A6B;
+    padding: 10px;
+}
