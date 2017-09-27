@@ -1,0 +1,60 @@
+\documentclass[11pt]{article}
+\newcommand\floor[1]{\lfloor#1\rfloor}
+\usepackage{amsmath}
+
+%\usepackage{customizations}
+\usepackage{listings}
+
+
+\textwidth=15cm
+\oddsidemargin=0.7cm
+\voffset=-1cm
+\textheight=20cm
+\usepackage{xcolor}
+
+
+\begin{document}
+
+
+\title{
+  CS 171: Visualization \\
+  \Large{Homework 3 (Due September 25th, 2017 at 11:59pm)}
+}
+\date{}
+
+\maketitle
+
+\vspace{-1cm}
+
+
+\section*{Design Analysis / Critique}
+
+\begin{enumerate}
+  \item \textbf{Who is the audience?} \newline
+  	I believe the audience intended for this visualization is for people who are interested in learning more about causes of untimely death. The visualization is broken into 3 majors categories and then inside these categories are more specific causes of death that people can take a look at.
+	
+  \item \textbf{Which questions does this visualization answer? Name at least three.}
+  \begin{enumerate}
+    \item What is the most likely cause of death?
+    \item Which cause of death had caused less deaths from 2005 to 2010 in injuries category?
+    \item Which category causes the most deaths?
+  \end{enumerate}
+  
+  \item \textbf{What data is represented in the visualization? Be specific and comprehensive.} \newline
+  The type of data represented in the visualization is a mix between quantitative and nominal data. The reason being is that there are actually no numbers representing the different blocks besides the annual percentage change at the bottom of the graph. We just know which cause of death is greater than the other by the size of the blocks. Also color intensity is used as the other quantitative data.
+  
+  \item \textbf{For each data type, describe how it is encoded in the visualization using Bertin's marks and channels. E.g.
+color saturation (channel) encodes annual percentage of change between 2005 and 2010.} \newline
+  For the nominal data type, Bertin's size channel is used extensively in the chart by using different sized blocks in each major category to represent the cause of death that is more likely than the other. Also every block is put together nicely so that it represents a larger rectangular block. Orientation is also used in the visualization just so that the categories (infectious diseases/birth problems, injuries, and noncommunicable diseases) are more distinct.
+  
+  
+  \item \textbf{How are the perceptual channels contrast and color used in the visualization? Name at least two potential
+problems.} \newline
+The way contrast is used is to show the gradual annual percentage of change in increasing order. Color is used in order to distinguish the three major categories of causes of death. When I first looked at the graph, I believed that the darker the color the higher the percentage of death liability. However, because the size of the blocks also matter, I decided that it couldn't be the case. Another problem I see is due to the three different colors, people can misinterpret the results. It would be better if they used a single color and just had black borders surrounding the categories to differentiate them. Using a single diverging color could make it easier to understand the data.
+  
+  \item \textbf{How are Tufte's design principles used or violated in this chart?} \newline
+  I believe that the data-ink ratio is highly violated in this chart. I know it seems cool to want to use 3D bar graph to make it look more visually appealing, but I think it's highly unnecessary. I don't necessarily think there is a lie factor in the graph because I'm not sure why someone would lie about what causes more deaths. Also, there are no percentages given so it is a little difficult to tell. We can only go by the size of the block in the graph. For the avoiding chartjunk principle, I'm not sure whether the random slithers in the graph are just there are fillers, or if they are presenting a different cause of death. Perhaps, they aren't necessary.
+\end{enumerate}
+
+
+\end{document}
