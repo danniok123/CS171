@@ -1,0 +1,63 @@
+
+
+/**** ADD YOUR STYLES ****/
+
+h1 {
+  font-family: "Comic Sans MS", cursive, sans-serif;
+  color: blue;
+}
+
+/****************/
+/*   BAR-CHART  */
+/****************/
+
+.bar {
+  fill: #f1c40f;
+}
+
+.bar:hover {
+  fill: #f39c12;
+}
+
+.axis {
+  font: 10px sans-serif;
+}
+
+.axis path,
+.axis line,
+.domain {
+  fill: none;
+  stroke: #888;
+  shape-rendering: crispEdges;
+}
+
+.vert-line {
+  stroke: blue;
+  stroke-width: 1px;
+}
+
+
+.pop-text {
+  stroke: red;
+}
+
+.area {
+  fill: #16a085;
+}
+
+.axis-label {
+  font-family: "Verdana", serif;
+  fill: #333;
+  font-size: 15px !important;
+}
+
+.chart-label {
+  font-family: "Verdana", serif;
+  fill: #333;
+  font-size: 20px;
+  text-anchor: middle;
+}
+
+.bar-label {
+  text-anchor: middle;
+}
