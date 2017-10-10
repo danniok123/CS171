@@ -100,7 +100,7 @@ d3.csv("data/zaatari-refugee-camp-population.csv", function(data){
     	.attr('y', -10);
 
 
-    /****************************************************/
+    /************************ Vertical Moving Line ****************************/
 
     var bisectDate = d3.bisector(function(d) {
     	return d.date;
@@ -144,6 +144,10 @@ d3.csv("data/zaatari-refugee-camp-population.csv", function(data){
 
 	    var year = d3.timeFormat("%Y")(d.date) - 2000;
 
+        focus.select("line.vert-line")
+            .attr("transform",
+                "translate(" + dateScale(d.date) + ",0)");
+
 	    focus.select("text.pop-text")
 	      .attr("transform", 
 	      	"translate(" + dateScale(d.date) + ",0)")
@@ -154,9 +158,6 @@ d3.csv("data/zaatari-refugee-camp-population.csv", function(data){
 	      	"translate(" + dateScale(d.date) + ",0)")
 	      .text(d3.timeFormat("%m/%d/" + String(year))(d.date));
 
-	    focus.select("line.vert-line")
-	      .attr("transform", 
-	      	"translate(" + dateScale(d.date) + ",0)")
     }
 
     /*****************************************************/

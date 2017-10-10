@@ -1,5 +1,5 @@
 
-var margin = {top: 20, right: 10, bottom: 20, left: 10};
+var margin = {top: 20, right: 10, bottom: 50, left: 70};
 
 // SVG Size
 var width = 700 - margin.left - margin.right,
@@ -36,16 +36,16 @@ d3.csv("data/wealth-health-2014.csv", function(data){
 
 	var popMax = d3.max(data, function(d) {return d.Population;});
 
-	var incomePadding = 30;
+	var incomePadding = 100;
 	var lifePadding = 10;
 
 	var incomeScale = d3.scaleLog()
-		.domain([incomeMin - 100, incomeMax +100])
-		.range([incomePadding, width - incomePadding]);
+		.domain([incomeMin - incomePadding, incomeMax + incomePadding])
+		.range([0, width]);
 
 	var lifeExpectancyScale = d3.scaleLinear()
-		.domain([lifeMin, lifeMax])
-		.range([height - lifePadding -31, lifePadding]);
+		.domain([lifeMin - 5, lifeMax + 5])
+		.range([height, 0]);
 
 	var populationScale = d3.scaleLinear()
 		.domain([0, popMax])
@@ -79,30 +79,38 @@ d3.csv("data/wealth-health-2014.csv", function(data){
 	var group = svg.append("g")
 		.attr("transform", "translate(70, 50)");
 
+    var xScale = d3.scaleLinear()
+        .domain([incomeMin - incomePadding, incomeMax + incomePadding])
+        .range([0, width]);
+
+    var yScale = d3.scaleLinear()
+        .domain([lifeMin - 5, lifeMax + 5])
+        .range([height, 0]);
+
 	var xAxis = d3.axisBottom()
-		.scale(incomeScale)
-		.ticks(6, d3.format("d"));
+		.scale(xScale)
+		.ticks(6)
 
 	var yAxis = d3.axisLeft()
-		.scale(lifeExpectancyScale);
+		.scale(yScale);
 	
 	// Draw the axis
 	svg.append("g")
 		.attr("class", "axis x-axis")
-		.attr("transform", "translate(0," + (height - 40) + ")")
+		.attr("transform", "translate(0," + (height) + ")")
 		.call(xAxis)
 		.append("text")
 		.attr("class", "axis-label")
-		.attr("transform", "translate(" + (width / 2) + ", 32)")
+		.attr("transform", "translate(" + (width / 2) + ", 40)")
 		.text("Income");
 
 	svg.append("g")
 		.attr("class", "axis y-axis")
-		.attr("transform", "translate(" + 40 + ", 0)")
+		.attr("transform", "translate(" + 0 + ", 0)")
 		.call(yAxis)
 		.append("text")
 		.attr("class", "axis-label")
-		.attr("transform", "translate(-40, " + 170 + ") rotate(-90)")
+		.attr("transform", "translate(-35, " + 170 + ") rotate(-90)")
 		.text("Life Expectancy");
 
 });
